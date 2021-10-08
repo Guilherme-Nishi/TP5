@@ -11,34 +11,13 @@ import controle.ControleCliente;
 import controle.ControleDados;
 
 import java.util.*;
-/**
- * Componente Curricular:Orientação a objetos
- * Esta classe implementa a interface da pesquisa do cliente
- * @author Guilherme Nishimura Da Silva
- * @author Guilherme Evangelista Ferreira dos Santos
- * @version 1.0(oct 2021)
- *
- *
- * 
- */
-
+	 
 	public class PesquisaCliente extends JFrame implements ActionListener , ListSelectionListener{
 	
 
 	JList lista;  
 	 
 	  private static ControleDados dados;
-	  
-	 /**
-		 * Esta classe implementa a interface da pesquisa do cliente. 
-		 * Ela contem uma interface de pesquisa como pesquisar
-		 * 
-		 * 
-		 * 
-		 * @param d é um parâmetro que  referencia a classe ControleDados
-		 * 
-		 * 
-		 */
 	  public void Pesquisa(ControleDados d) {
 	   
 	     dados = d;

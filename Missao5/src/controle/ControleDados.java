@@ -1,24 +1,9 @@
 package controle;
 
 import lojaRoupas.*;
-/**
-* Componente Curricular:Orientação a objetos
-* Esta classe implementa o controle de dados
-* @author Guilherme Nishimura Da Silva
-* @author Guilherme Evangelista Ferreira dos Santos
-* @version 1.0(oct 2021)
-*
-* 
-*/
+
 public class ControleDados {
 	private Dados d = new Dados();
-	/**
-	 * Esta classe implementa o comportamento de controle de dados. Portanto ela
-	 * faz o controle da dados da classe ControleCliente,ControleProduto,
-	 * ControleVendas
-	 * 
-	 * 
-	 */
 	
 	public ControleDados() {
 		d.fillWithSomeData();
@@ -29,6 +14,14 @@ public class ControleDados {
 	}
 	public void setDados(Dados d) {
 		this.d = d;
+	}
+	
+	public Funcionario[] getFuncionario() {
+		return this.d.getFuncionarios();
+	}
+	
+	public int getqtdFunc() {
+		return this.d.getQtdfuncionarios();
 	}
 
 	public Produto[] getProduto() {
@@ -54,11 +47,7 @@ public class ControleDados {
 			return this.d.getQtdvend();
 		}
 	
-	   /**
-		 * @param dadosCliente é uma String que faz o controle dos dados do cliente
-		 * @return true se os dados forem anexados
-		 * 
-		 */
+
 
 	public boolean inserirEditarCliente(String[] dadosCliente) {
 		int ut = 1;
@@ -72,11 +61,7 @@ public class ControleDados {
 				return true;
 		}
 	}
-	/**
-	 * @param dadosProduto é uma String que faz o controle dos dados do produto
-	 * 
-	 * @return true se os dados forem anexados
-	 */
+	
 	// a posicao 0 do vetor dadosProduto indica onde os dados devem ser inseridos
 	public boolean inserirEditarProduto(String[] dadosProduto) {
 		int tu = 1;
@@ -91,12 +76,21 @@ public class ControleDados {
 		}
 	}
 	
+	public boolean inserirEditarFunc(String[] dadosFunc) {
+		int tu = 1;
+		if(tu==0) {
+			return false;
+		} else {
+				Funcionario a = new Funcionario(dadosFunc[1],dadosFunc[2],dadosFunc[3],new Endereço(dadosFunc[4] , dadosFunc[5] , Integer.parseInt(dadosFunc[6]) , dadosFunc[7])); 
+						
+				d.inserirEditarFunc(a, Integer.parseInt(dadosFunc[0]));
+				
+				return true;
+		}
+	}
 	
-	/**
-	 * @param dadosVenda é uma String que faz o controle dos dados da venda
-	 * 
-	 * @return true se os dados forem anexados
-	 */
+	
+	
 	public boolean inserirEditarVenda(String[] dadosVenda) {
 		int tu = 1;
 		if(tu==0) {
@@ -110,11 +104,7 @@ public class ControleDados {
 		}
 	}
 	
-	/**
-	 * @param i  é um inteiro que serve para gerar um vetor
-	 * @return true se os dados forem removidos
-	 * 
-	 */
+	
 	public boolean removerP(int i) {
 		int qtdven = d.getQtdvend();
 		String produtoRemovido = d.getProduto()[i].getNomeproduto();
@@ -136,6 +126,32 @@ public class ControleDados {
 			}
 			d.getProduto()[d.getqtdproduto()] = null;
 			d.setQqtdproduto(d.getqtdproduto() - 1);
+			return true;
+		}
+	}
+	
+	
+	public boolean removerF(int i) {
+		int qtdfun = d.getQtdfuncionarios();
+		String produtoRemovido = d.getFuncionarios()[i].getNome();
+		String aux;
+		
+		if(i == (d.getQtdfuncionarios() - 1)) { // O aluno a ser removido está no final do array
+			d.setQtdfuncionarios(d.getQtdfuncionarios() - 1);
+			d.getFuncionarios()[d.getQtdfuncionarios()] = null;
+			return true;
+		} else { // o aluno a ser removido está no meio do array
+			int cont = 0;
+			while(d.getFuncionarios()[cont].getNome().compareTo(produtoRemovido) != 0) {
+				cont++;
+			}
+			//Rotina swap
+			for(int j = cont; j < d.getQtdfuncionarios() - 1; j++) {
+				d.getFuncionarios()[j] = null;
+				d.getFuncionarios()[j] = d.getFuncionarios()[j+1];
+			}
+			d.getFuncionarios()[d.getQtdfuncionarios()] = null;
+			d.setQtdfuncionarios(d.getQtdfuncionarios() - 1);
 			return true;
 		}
 	}

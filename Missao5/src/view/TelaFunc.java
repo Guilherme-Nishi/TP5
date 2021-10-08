@@ -7,39 +7,20 @@ import javax.swing.*;
 import controle.ControleDados;
 
 import java.awt.*;
-/**
- * Componente Curricular:Orientação a objetos
- * Esta classe implementa a interface do funcionário
- * @author Guilherme Nishimura Da Silva
- * @author Guilherme Evangelista Ferreira dos Santos
- * @version 1.0(oct 2021)
- *
- *
- *
- * 
- */
+
 public class TelaFunc implements ActionListener {
 	private static JFrame telaFunc = new JFrame();
-	private static JLabel tituloFunc = new JLabel("Menu do funcionário");
-	private static JButton buttonListaClientes = new JButton("Lista e edição de clientes");
+	private static JLabel tituloFunc = new JLabel("Menu do funcionario");
+	private static JButton buttonListaClientes = new JButton("Lista e edicao de clientes");
 	private static JButton buttonListaProdutos = new JButton("Lista e cadastro de produtos");
 	private static JButton buttonCadastrarVendas = new JButton("Lista e cadastro de vendas");
 	private static JButton buttonPesquisaCliente = new JButton("Pesquisar cliente");
 	private static JButton buttonPesquisaProduto = new JButton("Pesquisar Produto");
 	private static JButton buttonPesquisaVenda = new JButton("Pesquisar venda");
+	private static JButton buttonCadastrarFunc = new JButton("Cadastrar novo funcionario");
 	public static ControleDados dados ;
 	
-	 /**
-	 * Esta classe implementa a interface o funcioário. 
-	 * Ela contem uma interface do funcionário como pesquisar venda,fazer venda,editar cliente
-	 * listar cliente,venda e produto.
-	 * 
-	 * 
-	 * 
-	 * @param d é um parâmetro que  referencia a classe ControleDados
-	 * 
-	 * 
-	 */
+	
 	public void TelaFunc1(ControleDados d) {
 		dados=d;
 		
@@ -69,8 +50,10 @@ public class TelaFunc implements ActionListener {
 		buttonPesquisaVenda.setBounds(45,370,300,40);
 		telaFunc.add(buttonPesquisaVenda);
 		
+		buttonCadastrarFunc.setBounds(45,430,300,40);
+		telaFunc.add(buttonCadastrarFunc);
 		
-		telaFunc.setSize(400,470);
+		telaFunc.setSize(400,550);
 	
 		telaFunc.setVisible(true);
 		telaFunc.setLocationRelativeTo(null);
@@ -80,6 +63,7 @@ public class TelaFunc implements ActionListener {
 		buttonPesquisaCliente.addActionListener(this);
 		buttonPesquisaVenda.addActionListener(this);
 		buttonPesquisaProduto.addActionListener(this);
+		buttonCadastrarFunc.addActionListener(this);
 	}
 
 	
@@ -99,6 +83,7 @@ public class TelaFunc implements ActionListener {
 			new TelaListaVendas().ListaProdutos(dados);
 		}
 		
+		
 		if(src==buttonPesquisaCliente) {
 			new PesquisaCliente().Pesquisa(dados);
 		}
@@ -109,6 +94,10 @@ public class TelaFunc implements ActionListener {
 		
 		if(src==buttonPesquisaVenda) {
 			new PesquisaVenda().Pesquisa(dados);
+		}
+		
+		if(src == buttonCadastrarFunc) {
+			new TelaListaFunc().ListaFunc(dados);
 		}
 	}
 

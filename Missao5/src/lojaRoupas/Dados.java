@@ -211,6 +211,12 @@ public class Dados {
 	public void setQtdclient(int qtdclient) {
 		this.qtdclient = qtdclient;
 	}
+	
+	public void inserirEditarFunc(Funcionario b, int pos) {
+		this.funcionarios[pos] = b;
+		if(pos == qtdfuncionarios) qtdfuncionarios++;
+	}
+	
 	/**
 	 
 	 * 
