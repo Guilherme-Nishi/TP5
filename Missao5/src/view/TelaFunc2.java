@@ -10,7 +10,17 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import controle.ControleDados;
-
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa a interface do funcionário
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ *
+ *
+ *
+ * 
+ */
 public class TelaFunc2 implements ActionListener{
 	private static JFrame telaFunc = new JFrame();
 	private static JLabel tituloFunc2;
@@ -27,7 +37,17 @@ public class TelaFunc2 implements ActionListener{
 	private static ControleDados dados;
 	private int posicao;
 	
-	
+	/**
+	 * Esta classe implementa a interface  funcionário. 
+	 * Ela contem uma interface de r os dados da classe funcionário.
+	 * 
+	 * 
+	 * 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * @param f é um parâmetro que  referencia a classe TelaListaFunc
+	 * @param pos é um inteiro que serve para implementar a posição do vetor
+	 * 
+	 */
 	public void TelaFunc (ControleDados d , TelaListaFunc f , int pos) {
 		dados = d;
 		posicao=pos;
@@ -122,7 +142,13 @@ public class TelaFunc2 implements ActionListener{
 		
 	}
 	
-	
+	/**
+	 * Esse método exibirá uma mensagem de erro ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemSucessoExclusao() {
 		JOptionPane.showMessageDialog(null, "Os dados foram excluidos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);

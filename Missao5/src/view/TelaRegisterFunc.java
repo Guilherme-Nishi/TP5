@@ -11,7 +11,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import controle.ControleDados;
-
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa a interface de registro dos funcionários
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ *
+ *
+ *
+ * 
+ */
 public class TelaRegisterFunc implements ActionListener {
 	
 	private static JFrame telaFunc = new JFrame();
@@ -33,7 +43,16 @@ public class TelaRegisterFunc implements ActionListener {
 	private static JButton cadastro = new JButton("Salvar");
 	private static ControleDados dados;
 	private String[] novoDado = new String[13];
-	
+	/**
+	 * Esta classe implementa a interface do registro do funcionário. 
+	 * Ela contem uma interface de registro para registrar os dados da classe Funcionário.
+	 * 
+	 * 
+	 * 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * 
+	 * 
+	 */
 	public void RegistrarFunc(ControleDados d) {
 		dados = d;
 		telaFunc.setLayout(null);
@@ -126,7 +145,13 @@ public class TelaRegisterFunc implements ActionListener {
 		}
 		
 	}
-	
+	/**
+	 * Esse método exibirá uma mensagem de dados salvos com sucesso
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemSucessoCadastro() {
 		JOptionPane.showMessageDialog(null, "Os dados foram salvos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);

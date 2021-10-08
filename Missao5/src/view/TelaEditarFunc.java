@@ -11,7 +11,18 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import controle.ControleDados;
-
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa a interface de edição dos funcionarios
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ * 
+ * 
+ *
+ *
+ * 
+ */
 public class TelaEditarFunc implements ActionListener {
 	
 	private static JFrame telaFunc = new JFrame();
@@ -34,7 +45,17 @@ public class TelaEditarFunc implements ActionListener {
 	private static ControleDados dados;
 	private String[] novoDado = new String[13];
 	private int posicao;
-	
+	/**
+	 * Esta classe implementa a interface do Edição do funcionário. 
+	 * Ela contem uma interface de edição para editar os dados da classe funcionário.
+	 * 
+	 * 
+	 * 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * @param t é um parâmetro que  referencia a classe TelaFunc2
+	 * @param pos é um inteiro que serve para implementar a posição do vetor
+	 * 
+	 */
 	public void RegistrarFunc(ControleDados d,TelaFunc2 t , int pos) {
 		dados = d;
 		posicao=pos;
@@ -142,7 +163,13 @@ public class TelaEditarFunc implements ActionListener {
 		}
 		
 	}
-	
+	/**
+	 * Esse método exibirá uma mensagem de sucesso ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemSucessoCadastro() {
 		JOptionPane.showMessageDialog(null, "Os dados foram salvos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);

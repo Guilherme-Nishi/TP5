@@ -1,9 +1,33 @@
 package controle;
 
 import lojaRoupas.*;
-
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa o controle de dados
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ *
+ * 
+ */
 public class ControleDados {
 	private Dados d = new Dados();
+	/**
+	 * Esta classe implementa o comportamento do controle de dados. Portanto ela
+	 * contém os atributos de um controle do Funcionário,cliente ,venda e produto.
+	 * 
+	 * 
+	 * 
+	 * Exemplo de uso:
+	 *
+	 * ControleDados dados = new ControleDados();
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 	
 	public ControleDados() {
 		d.fillWithSomeData();
@@ -48,7 +72,13 @@ public class ControleDados {
 		}
 	
 
-
+	   /**
+		 * @param dadosCliente é um vetor de string que armazena para inserir e editar
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	public boolean inserirEditarCliente(String[] dadosCliente) {
 		int ut = 1;
 		if(ut==0) {
@@ -62,6 +92,13 @@ public class ControleDados {
 		}
 	}
 	
+	/**
+	 * @param dadosProduto  é um vetor de string que armazena para inserir e editar
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 	// a posicao 0 do vetor dadosProduto indica onde os dados devem ser inseridos
 	public boolean inserirEditarProduto(String[] dadosProduto) {
 		int tu = 1;
@@ -75,7 +112,13 @@ public class ControleDados {
 				return true;
 		}
 	}
-	
+	/**
+	 * @param dadosFunc é um vetor de string que armazena para inserir e editar
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 	public boolean inserirEditarFunc(String[] dadosFunc) {
 		int tu = 1;
 		if(tu==0) {
@@ -90,7 +133,13 @@ public class ControleDados {
 	}
 	
 	
-	
+	/**
+	 * @param dadosVenda é um vetor de string que armazena para inserir e editar
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 	public boolean inserirEditarVenda(String[] dadosVenda) {
 		int tu = 1;
 		if(tu==0) {

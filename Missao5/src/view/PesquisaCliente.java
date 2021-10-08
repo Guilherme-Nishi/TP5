@@ -1,6 +1,16 @@
 package view;
 
-
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa a interface da pesquisa dos clientes
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ *
+ *
+ *
+ * 
+ */
 	import java.awt.*;
 	import java.awt.event.*;
 	import javax.swing.*;
@@ -18,6 +28,15 @@ import java.util.*;
 	JList lista;  
 	 
 	  private static ControleDados dados;
+	  /**
+		 * Esta classe implementa a interface da pesquisa do cliente.
+		 * 
+		 * @param d é um parâmetro da classe ControleDados que serve para referencia-la
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	  public void Pesquisa(ControleDados d) {
 	   
 	     dados = d;
@@ -67,7 +86,15 @@ import java.util.*;
 	    setVisible(true);
 	  }
 	   
-	  
+	  /**
+		 * Esta classe implementa a interface da pesquisa do cliente.
+		 * 
+		 * @param texto é uma string que armazena o texto string a ser colocado.
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	 
 	  public void pesquisarLista(String texto){
 	    int pos = lista.getNextMatch(texto, 0, Position.Bias.Forward);

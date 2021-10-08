@@ -7,7 +7,17 @@ import javax.swing.*;
 import controle.ControleDados;
 
 import java.awt.*;
-
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa a interface do funcionário
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ *
+ *
+ *
+ * 
+ */
 public class TelaFunc implements ActionListener {
 	private static JFrame telaFunc = new JFrame();
 	private static JLabel tituloFunc = new JLabel("Menu do funcionario");
@@ -20,7 +30,15 @@ public class TelaFunc implements ActionListener {
 	private static JButton buttonCadastrarFunc = new JButton("Cadastrar novo funcionario");
 	public static ControleDados dados ;
 	
-	
+	/**
+	 * Esta classe implementa a interface do funcionário
+	 * 
+	 * @param d é um parâmetro da classe ControleDados que serve para referencia-la
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 	public void TelaFunc1(ControleDados d) {
 		dados=d;
 		

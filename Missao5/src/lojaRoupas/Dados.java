@@ -211,6 +211,14 @@ public class Dados {
 	public void setQtdclient(int qtdclient) {
 		this.qtdclient = qtdclient;
 	}
+	/**
+	 
+	 * 
+	 * @param b é parâmetro  que será armazenado a classe Funcionário
+	 * @param pos é um inteiro que será armazenado a posição  da venda
+	 * 
+	 * 
+	 */
 	
 	public void inserirEditarFunc(Funcionario b, int pos) {
 		this.funcionarios[pos] = b;

@@ -5,7 +5,17 @@ import javax.swing.*;
 import javax.swing.event.*;
 import controle.*;
 
-
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa a interface de lista dos funcionários
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ *
+ *
+ *
+ * 
+ */
 public class TelaListaFunc implements ActionListener, ListSelectionListener {		
 	private JFrame janelaLista2;
 	private JLabel tituloLista2;
@@ -14,6 +24,16 @@ public class TelaListaFunc implements ActionListener, ListSelectionListener {
 	private static ControleDados dados;
 	private JList<String> listaFuncionariosCadastrados;
 	private String[] listaNomesFunc = new String[50];
+	/**
+	 * Esta classe implementa a interface de lista dos funcionários. 
+	 * Ela contem uma interface de listar o nome dos clientes da classe Funcionário
+	 * 
+	 * 
+	 * 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * 
+	 * 
+	 */
 	
 	public void ListaFunc(ControleDados d) {
 		dados=d;

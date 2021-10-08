@@ -13,13 +13,33 @@ import controle.ControleProduto;
 import controle.ControleVendas;
 
 import java.util.*;
-	 
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa a interface da pesquisa das vendas
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ *
+ *
+ *
+ * 
+ */
 	public class PesquisaVenda extends JFrame implements ActionListener , ListSelectionListener{
 	
 	private static JButton att = new JButton("Atualizar");
 	JList lista;  
 	 
 	  private static ControleDados dados;
+	  
+	  /**
+		 * Esta classe implementa a interface da pesquisa das vendas
+		 * 
+		 * @param d é um parâmetro da classe ControleDados que serve para referencia-la
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	  public void Pesquisa(ControleDados d) {
 	   
 	     dados = d;
@@ -73,7 +93,15 @@ import java.util.*;
 	  }
 	   
 	  
-	 
+	  /**
+		 * Esta classe implementa a interface da pesquisa do cliente.
+		 * 
+		 * @param texto é uma string que armazena o texto string a ser colocado.
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	  public void pesquisarLista(String texto){
 	    int pos = lista.getNextMatch(texto, 0, Position.Bias.Forward);
 	    lista.setSelectedIndex(pos);

@@ -12,7 +12,17 @@ import controle.ControleDados;
 import controle.ControleProduto;
 
 import java.util.*;
-	 
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa a interface da pesquisa dos produtos
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ *
+ *
+ *
+ * 
+ */
 	public class PesquisarProduto extends JFrame implements ActionListener , ListSelectionListener{
 	
 
@@ -21,7 +31,15 @@ import java.util.*;
 	 
 	  private static ControleDados dados;
 	  private static JButton att = new JButton("Atualizar");
-	  
+	  /**
+		 * Esta classe implementa a interface da pesquisa do produto
+		 * 
+		 * @param d é um parâmetro da classe ControleDados que serve para referencia-la
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	  public void Pesquisa(ControleDados d) {
 		  
 	     dados = d;
@@ -74,7 +92,14 @@ import java.util.*;
 	    setSize(350, 300);
 	    setVisible(true);
 	  }
-	  
+	  /**
+		 * 
+		 * @param d é um parâmetro da classe ControleDados que serve para referencia-la
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	  public void Pesquisa2(ControleDados d) {
 		  
 		     dados = d;
@@ -130,13 +155,29 @@ import java.util.*;
 		   
 	   
 	  
-	 
+	  /**
+		 * Esta classe implementa a interface da pesquisa do cliente.
+		 * 
+		 * @param texto é uma string que armazena o texto string a ser colocado.
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	  public void pesquisarLista(String texto){
 	    int pos = lista.getNextMatch(texto, 0, Position.Bias.Forward);
 	    lista.setSelectedIndex(pos);
 	    lista.ensureIndexIsVisible(pos);
 	  }
-	  
+	  /**
+		 * Esta classe implementa a interface da pesquisa do cliente.
+		 * 
+		 * @param texto é uma string que armazena o texto string a ser colocado.
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	  public void pesquisarLista2(String texto){
 		    int pos = lista2.getNextMatch(texto, 0, Position.Bias.Forward);
 		    lista2.setSelectedIndex(pos);
