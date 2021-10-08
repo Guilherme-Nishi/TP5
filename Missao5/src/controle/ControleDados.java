@@ -56,7 +56,7 @@ public class ControleDados {
 	
 	   /**
 		 * @param dadosCliente é uma String que faz o controle dos dados do cliente
-		 * 
+		 * @return true se os dados forem anexados
 		 * 
 		 */
 
@@ -75,7 +75,7 @@ public class ControleDados {
 	/**
 	 * @param dadosProduto é uma String que faz o controle dos dados do produto
 	 * 
-	 * 
+	 * @return true se os dados forem anexados
 	 */
 	// a posicao 0 do vetor dadosProduto indica onde os dados devem ser inseridos
 	public boolean inserirEditarProduto(String[] dadosProduto) {
@@ -95,7 +95,7 @@ public class ControleDados {
 	/**
 	 * @param dadosVenda é uma String que faz o controle dos dados da venda
 	 * 
-	 * 
+	 * @return true se os dados forem anexados
 	 */
 	public boolean inserirEditarVenda(String[] dadosVenda) {
 		int tu = 1;
@@ -112,7 +112,7 @@ public class ControleDados {
 	
 	/**
 	 * @param i  é um inteiro que serve para gerar um vetor
-	 * 
+	 * @return true se os dados forem removidos
 	 * 
 	 */
 	public boolean removerP(int i) {

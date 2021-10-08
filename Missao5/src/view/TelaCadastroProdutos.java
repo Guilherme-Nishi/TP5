@@ -136,7 +136,14 @@ public class TelaCadastroProdutos implements ActionListener{
 		buttonRegisterProd.addActionListener(this);
 		
 	}
-	
+	/**
+	 * 
+	 * 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * @param x é um parâmetro que  referencia a classe TelaListaClientes
+	 * 
+	 * 
+	 */
 	public void TelaCadastroProdutos3(ControleDados d , TelaListaClientes x) {
 		Color minhaCor2 = new Color(192, 192, 192);
 				dados=d;
@@ -256,13 +263,26 @@ public class TelaCadastroProdutos implements ActionListener{
 		
 	}
 
+	/**
+	 * Esse método exibirá uma mensagem de dados salvos com sucesso
+	 *
+	 *
+	 *
+	 * 
+	 */
 	
 	public void mensagemSucessoCadastro() {
 		JOptionPane.showMessageDialog(null, "Os dados foram salvos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);
 		telaRegistroProdutos.dispose();
 	}
-	
+	/**
+	 * Esse método exibirá uma mensagem de erro ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemErroCadastro() {
 		JOptionPane.showMessageDialog(null,"ERRO AO SALVAR OS DADOS!\n "
 				+ "Pode ter ocorrido um dos dois erros a seguir:  \n"
@@ -270,7 +290,13 @@ public class TelaCadastroProdutos implements ActionListener{
 				+ "2. CPF, identidade, DDD e telefone não contém apenas números", null, 
 				JOptionPane.ERROR_MESSAGE);
 	}
-	
+	/**
+	 * Esse método exibirá uma mensagem de nulo  ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemNULL(){
 		JOptionPane.showMessageDialog(null, "nulo");
 	}

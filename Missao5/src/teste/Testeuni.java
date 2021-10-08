@@ -22,7 +22,7 @@ class Testeuni {
 
 	@Test
 	void testValidaPreco() {
-		assertEquals(false,v.validaPreco(0));
+		assertEquals(false,v.validaPreco(0.00));
 		
 		
 	}

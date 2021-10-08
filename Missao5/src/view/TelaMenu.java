@@ -55,7 +55,17 @@ public class TelaMenu implements ActionListener {
 		tela.setLocationRelativeTo(null);
 		tela.setVisible(true);
 	}
-
+	/**
+	 * @param args é um vetor de String
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 *
+	 * 
+	 */
 	public static void main(String[] args) {
 		TelaMenu novaTela = new TelaMenu();
 		user.addActionListener(novaTela);

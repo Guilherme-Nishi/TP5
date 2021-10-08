@@ -116,7 +116,16 @@ Color minhaCor2 = new Color(192, 192, 192);
 		}
 		
 	}
-	
+	/**
+	 * Esse método  publica mensagem de successo dos dados salvos.
+	 * 
+	 * 
+	 *
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 	public void mensagemSucessoCadastro() {
 		JOptionPane.showMessageDialog(null, "Os dados foram salvos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);

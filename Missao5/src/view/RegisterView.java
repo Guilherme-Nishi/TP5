@@ -182,12 +182,26 @@ public class RegisterView implements ActionListener{
 		}
 	}
 	
+	/**
+	 * Esse método exibirá uma mensagem de dados salvos com sucesso
+	 *
+	 *
+	 *
+	 * 
+	 */
+	
 	public void mensagemSucessoCadastro() {
 		JOptionPane.showMessageDialog(null, "Os dados foram salvos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);
 		telaRegistro.dispose();
 	}
-
+	/**
+	 * Esse método exibirá uma mensagem de erro ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemErroCadastro() {
 		JOptionPane.showMessageDialog(null,"ERRO AO SALVAR OS DADOS!\n "
 				+ "Pode ter ocorrido um dos dois erros a seguir:  \n"

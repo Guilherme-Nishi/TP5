@@ -158,7 +158,13 @@ public class TelaEditarProduto implements ActionListener{
 		
 	}
 	
-	
+	/** 
+	 * 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * @param r é um parâmetro que  referencia a classe PesquisarProduto
+	 * @param pos é um inteiro que serve para implementar a posição do vetor
+	 * 
+	 */
 	public void TelaCadastroProdutos3(ControleDados d , PesquisarProduto r ,int pos) {
 
 		dados=d;
@@ -288,13 +294,25 @@ public class TelaEditarProduto implements ActionListener{
 		}
 	
 
-	
+	/**
+	 * Esse método exibirá uma mensagem de sucesso ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemSucessoCadastro() {
 		JOptionPane.showMessageDialog(null, "Os dados foram salvos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);
 		telaRegistroProdutos.dispose();
 	}
-	
+	/**
+	 * Esse método exibirá uma mensagem de erro ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemErroCadastro() {
 		JOptionPane.showMessageDialog(null,"ERRO AO SALVAR OS DADOS!\n "
 				+ "Pode ter ocorrido um dos dois erros a seguir:  \n"
@@ -302,11 +320,23 @@ public class TelaEditarProduto implements ActionListener{
 				+ "2. CPF, identidade, DDD e telefone não contém apenas números", null, 
 				JOptionPane.ERROR_MESSAGE);
 	}
-	
+	/**
+	 * Esse método exibirá uma mensagem de nulo  ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemNULL(){
 		JOptionPane.showMessageDialog(null, "nulo");
 	}
-	
+	/**
+	 * Esse método exibirá uma mensagem de sucesso ao excluir os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 	public void mensagemSucessoExclusao() {
 		JOptionPane.showMessageDialog(null, "Os dados foram excluidos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);

@@ -84,7 +84,14 @@ public class Dados {
 	public void setProduto(Produto[] produto) {
 		this.produto = produto;
 	}
-	
+	/**
+	 
+	 * 
+	 * @param a é parâmetro  que será armazenado a classe Produto
+	 * @param pos é um inteiro que será armazenado a posição  da venda
+	 * 
+	 * 
+	 */
 	public void inserirEditarProduto(Produto a, int pos) {
 		this.produto[pos] = a;
 		if(pos == qtdproduto) qtdproduto++;
@@ -111,7 +118,14 @@ public class Dados {
 	public void setCliente(Cliente[] cliente) {
 		this.cliente = cliente;
 	}
-	
+	/**
+	 
+	 * 
+	 * @param p é parâmetro  que será armazenado a classe Cliente
+	 * @param pos é um inteiro que será armazenado a posição  do cliente
+	 * 
+	 * 
+	 */
 	public void inserirEditacliente(Cliente p, int pos) {
 		this.cliente[pos] = p;
 		if(pos == qtdclient) qtdclient++;
@@ -197,7 +211,14 @@ public class Dados {
 	public void setQtdclient(int qtdclient) {
 		this.qtdclient = qtdclient;
 	}
-
+	/**
+	 
+	 * 
+	 * @param b é parâmetro  que será armazenado a classe Venda
+	 * @param pos é um inteiro que será armazenado a posição  da venda
+	 * 
+	 * 
+	 */
 	public void inserirEditarVenda(Venda b, int pos) {
 		this.venda[pos] = b;
 		if(pos == qtdvend) qtdvend++;

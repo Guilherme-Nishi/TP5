@@ -154,7 +154,13 @@ public class TelaEditarCliente implements ActionListener{
 		
 		
 	}
-	
+	/**
+	 * 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * @param r é um parâmetro que  referencia a classe PesquisaCliente
+	 * @param pos é um inteiro que serve para implementar a posição do vetor
+	 * 
+	 */
 	public void RegisterView2(ControleDados d, PesquisaCliente r,int pos){
 		dados=d;
 		posicao=pos;
@@ -307,13 +313,25 @@ public class TelaEditarCliente implements ActionListener{
 			
 				
 		}
-			
+	/**
+	 * Esse método exibirá uma mensagem de sucesso ao salvar os dados
+	 *
+	 *
+	 *
+	 * 
+	 */
 			public void mensagemSucessoCadastro() {
 				JOptionPane.showMessageDialog(null, "Os dados foram salvos com sucesso!", null, 
 						JOptionPane.INFORMATION_MESSAGE);
 				telaRegistro.dispose();
 			}
-			
+			/**
+			 * Esse método Tem como função fazer a interface sair da tela de edição
+			 *
+			 *@param pos é um inteiro que armazena a posição no vetor
+			 *
+			 * 
+			 */
 			public void Sair(int pos) {
 				tituloCli = new JLabel(dados.getCliente()[pos].getNome());
 				nameText = new JTextField(dados.getCliente()[pos].getNome());

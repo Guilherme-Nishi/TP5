@@ -105,7 +105,12 @@ public class TelaProduto implements ActionListener {
 		
 	}
 	
-	
+	/** 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * @param p é um parâmetro que  referencia a classe PesquisarProduto
+	 * @param pos é um inteiro que serve para implementar a posição do vetor
+	 * 
+	 */
 	public void ComprarTela2(ControleDados d , PesquisarProduto p,int pos) {
 		dados=d;
 		posicao=pos;
@@ -158,7 +163,12 @@ public class TelaProduto implements ActionListener {
 		telaProduto.setVisible(true);
 		
 	}
-	
+	 /** 
+	 * @param d é um parâmetro que  referencia a classe ControleDados
+	 * @param p é um parâmetro que  referencia a classe PesquisarProduto
+	 * @param pos é um inteiro que serve para implementar a posição do vetor
+	 * 
+	 */
 	public void ComprarTela3(ControleDados d , PesquisarProduto p,int pos) {
 		dados=d;
 		posicao=pos;
