@@ -1,7 +1,28 @@
 package lojaRoupas;
-
+/**
+ * Componente Curricular:Orientação a objetos
+ * Esta classe implementa o comportamento de um funcionário
+ * @author Guilherme Nishimura Da Silva
+ * @author Guilherme Evangelista Ferreira dos Santos
+ * @version 1.0(oct 2021)
+ * 
+ *
+ * 
+ */
 public class Validador {
-	
+	/**
+	 * Esta classe implementa o comportamento de um Validador. Portanto ela
+	 * valida o email,nome e cartão.
+	 * 
+	 * Exemplo de uso:
+	 *
+	 * Validador v = new Validador();
+	 * 
+	 * 
+	 * 
+	 * @param email é uma string que será armazenada o email a ser validado
+	 * @return aux a ser validado em true ou false nas condições colocadas
+	 */
 	public boolean validaEmail(String email) {
 		boolean aux=true;
 		if(email.isEmpty()) {
@@ -22,7 +43,13 @@ public class Validador {
 		
 		
 	}
-	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param nome é uma string que será armazenada o nome a ser validado
+	 * @return aux a ser validado em true ou false nas condições colocadas
+	 */
 	public boolean validaNome(String nome) {
 		boolean aux=true;
 		
@@ -44,6 +71,14 @@ public class Validador {
 		
 		
 	}
+	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param preco é uma double que será armazenada o nome a ser validado
+	 * @return aux a ser validado em true ou false nas condições colocadas
+	 */
 	public boolean validaPreco(double preco) {
 		boolean aux=true;
 		
